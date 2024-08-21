@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend+Deca&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="image-container">
+        <img src="../stylesheets/images/klinHub.jpeg" alt="Background Image" />
+      </div>
+      <div class="text-container">
+        <img class="logo" src="../stylesheets/images/logo.png" />
+
+          <div class="login">
+      <p>Already have an account? <a href="login">Login</a> <a href="/">Home</a> </p>
+    </div>
+
+
+        <h2 class="register">SIGN UP</h2>
+        <select id="roleDropdown">
+          <option value="">Select Role</option>
+          <option value="customer">Customer</option>
+          <option value="cleaner">Cleaner</option>
+        </select>
+
+        
+        <div id="customerSignupForm" class="signup-form">
+          <h3>Customer Signup Form</h3>
+          <form action="users/reg" , method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="gender"> Gender: </label>
+            <select name="gender" id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+
+            <label for="dateofbirth">Date of Birth:</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" required />
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" required />
+
+            <label for="phonenumber">Phone Number:</label>
+            <input type="tel" id="phonenumber" name="phonenumber" required />
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required />
+
+            <button type="submit">Sign Up as Customer</button>
+          </form>
+        </div>
+
+        <div id="cleanerSignupForm" class="signup-form">
+          <h3>Cleaner Signup Form</h3>
+          <form action="cleaners/reg" , method="post">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+
+            <label for="phonenumber">Phone Number:</label>
+            <input type="tel" id="phonenumber" name="phonenumber" required />
+
+            <label for="gender"> Gender: </label>
+            <select name="gender" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required />
+
+            <label for="nationalId">National ID Slip (Upload):</label>
+            <input type="file" id="nationalId" name="nationalId" accept="image/*" />
+            <!-- <input type="text" id="nationalId" name="nationalId" required /> -->
+
+            <label for="guarantorName">Guarantor Name:</label>
+            <input
+              type="text"
+              id="guarantorName"
+              name="guarantorName"
+              required
+            />
+
+            <label for="guarantorAddress">Guarantor Address:</label>
+            <input
+              type="text"
+              id="guarantorAddress"
+              name="guarantorAddress"
+              required
+            />
+
+            <label for="guarantorPhoneNumber">Guarantor Phone Number:</label>
+            <input
+              type="tel"
+              id="guarantorPhoneNumber"
+              name="guarantorPhoneNumber"
+              required
+            />
+
+            <label for="nextOfKinName">Next of Kin Name:</label>
+            <input
+              type="text"
+              id="nextOfKinName"
+              name="nextOfKinName"
+              required
+            />
+
+            <label for="nextOfKinPhoneNumber">Next of Kin Phone Number:</label>
+            <input
+              type="tel"
+              id="nextOfKinPhoneNumber"
+              name="nextOfKinPhoneNumber"
+              required
+            />
+
+            <button type="submit">Sign Up as Cleaner</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../script/script.js"></script>
+  </body>
+</html>

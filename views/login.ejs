@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lexend+Deca&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Public+Sans:wght@100&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="../stylesheets/style.css" />
+</head>
+<body>
+    <div class="background">
+      <div class="image-container">
+        <img src="../stylesheets/images/klinHub.jpeg" alt="Background Image" />
+    </div>
+    <div class="text-container">
+    <img class="logo" src="../stylesheets/images/logo.png" />
+
+
+    <h2 class="register" id="login">LOGIN</h2>
+
+    <select id="dropDown">
+    <option value="" > Select Role </option>
+    <option value="customer">Customer</option>
+    <option value="cleaner">Cleaner</option>
+    </select>
+
+        <div id="customerLoginForm">
+        <form action="users/login" method="post">
+            <label for="login-email">Customer Email:</label>
+            <input type="email" id="email" name="email" required />
+            <label for="login-password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button class="hey" type="submit">Login</button>
+        </form>
+        </div>
+
+        <div id="cleanerLoginForm">
+        <form action="cleaners/login" method="post">
+            <label for="cleaner-login-email">Cleaner Email:</label>
+            <input type="email" id="cleaner-login-email" name="email" required />
+            <label for="cleaner-login-password">Password:</label>
+            <input type="password" id="cleaner-login-password" name="password" required />
+            <button class="hey" type="submit">Login</button>
+        </form>
+        </div>
+
+        <div class="signup">
+            <p>Don't have an account? <a href="register">Sign Up</a> <a href="/">Home</a> </p>
+        </div>
+
+    <script src="../script/script.js"></script>
+  </body>
+</html>

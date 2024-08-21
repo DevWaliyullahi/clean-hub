@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/adminstyle.css">
+</head>
+<body>
+    <header>
+        <form id="logoutForm" action="/users/logout" method="post">
+          <button type="submit">Logout</button>
+        </form>
+      </header>
+    <div class="dashboard">
+        
+          <div class="content">
+            <h1 id="content-heading">Welcome to Admin Dashboard</h1>
+          </div>
+      <h3> Customer Table</h3>  
+    <!-- Assuming you have a container to display users -->
+    <div id="userList"></div>
+        <h3> Cleaners Table</h3>
+    <!-- Assuming you have a container to display cleaners -->
+    <div id="cleanerList"></div>
+        <h3> Services Table</h3>
+    <!-- Assuming you have a container to display services -->
+    <div id="serviceList"></div>
+
+
+
+
+
+    <script src="../script/admin.js"></script>
+
+</body>
+</html>

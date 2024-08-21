@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const services_1 = require("../controller/services");
+const router = express_1.default.Router();
+router.get("/history", services_1.getUserServiceHistory);
+router.post("/rate-review/:id", services_1.rateReviewService);
+router.post("/hire", services_1.hireCleaner);
+router.get("/", services_1.getAllServices);
+router.get("/:id", services_1.getServiceDetails);
+router.put("/accept/:id", services_1.acceptService);
+router.put("/reject/:id", services_1.rejectService);
+router.get("/pending", services_1.getPendingServices);
+router.get("/accepted", services_1.getAcceptedServices);
+router.get("/rejected", services_1.getRejectedServices);
+router.get("/user", services_1.getUserServices);
+router.put("/:id", services_1.editService);
+router.delete("/:id", services_1.deleteService);
+exports.default = router;

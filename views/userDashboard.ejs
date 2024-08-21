@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/user.css">
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+<body>
+    
+    <header>
+
+        <form id="logoutForm" action="/users/logout" method="post">
+            <button type="submit">Logout</button>
+        </form>
+        
+    </header>
+
+    <h1>Welcome, <%= fullname %> </h1>
+
+    <!-- List of Cleaners -->
+
+    <div id="cleanersList">
+        
+    </div>
+
+
+    <!-- Modal for hiring a cleaner -->
+    <div id="hireCleanerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hireCleanerModal')">&times;</span>
+            <form id="hireCleanerForm">
+                <h3>Hire Cleaner</h3>
+                <label for="name"> Client Name: </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="serviceName">Select Service:</label>
+                <select name="serviceName" id="serviceName">
+                    <option value="Residential Cleaning"> Residential Cleaning </option>
+                    <option value="Commercial Cleaning"> Commercial Cleaning </option>
+                    <option value="Specialized Cleaning"> Specialized Cleaning </option>
+                    <option value="Move-In/Move-Out Cleaning"> Move-In/Move-Out Cleaning </option>
+                    <option value="Post-Construction Cleaning"> Post-Construction Cleaning </option>
+                    <option value="Real Estate Cleaning"> Real Estate Cleaning </option>
+                    <option value="Educational Institute Cleaning"> Educational Institute Cleaning </option>
+                </select>
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <label for="servicePrice">Service Price:</label>
+                <input type="text" id="servicePrice" name="servicePrice" required>
+
+                <label for="address"> Client Address: </label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="date"> Date/time: </label>
+                <input type="datetime-local" id="date" name="date" required>
+
+                <input type="hidden" id="cleanerId" name="cleanerId">
+
+                <button type="submit">Hire Cleaner</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Modal for displaying user information -->
+    <div id="userInfoModal" class="modal"></div>
+    
+    
+
+
+
+
+
+
+    <button onclick="openRatingReviewForm()">Rate and Review Service</button>
+    <button onclick="fetchUserInfo()">User Profile</button>
+    <button onclick="fetchServiceHistory()">View Service History</button>
+
+
+        <!-- Service History -->
+    <div id="serviceHistory">
+
+
+    </div>
+
+    <script src="../script/user.js"></script>
+</body>
+</html>
